@@ -1,9 +1,9 @@
-require './backend/level1/classes/rental'
-require './backend/level1/classes/car'
+require './backend/classes/level_one/rental'
+require './backend/classes/level_one/car'
 
-describe Rental do
-  let(:car) { Car.new(1, 2000, 10) }
-  let(:rental) { Rental.new(1, car, "2017-12-8", "2017-12-10", 100) }
+describe LevelOne::Rental do
+  let(:car) { LevelOne::Car.new(1, 2000, 10) }
+  let(:rental) { LevelOne::Rental.new(1, car, "2017-12-8", "2017-12-10", 100) }
 
   describe '#price' do
     it 'properly calculates the price' do
